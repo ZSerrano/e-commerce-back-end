@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // create new product
-router.post("/", (req, res) => {
+router.post("/add", (req, res) => {
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -105,7 +105,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   // delete one product by its `id` value
   try {
     const deleteProduct = await Product.destroy({

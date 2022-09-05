@@ -29,7 +29,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/add", async (req, res) => {
   // create a new tag
   try {
     const newTag = await Tag.create(req.body);
@@ -43,7 +43,7 @@ router.put("/:id", (req, res) => {
   // update a tag's name by its `id` value
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   // delete on tag by its `id` value
   try {
     const deleteTag = await Tag.destroy({
